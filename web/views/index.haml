@@ -1,0 +1,21 @@
+%h1 
+  Rovers
+
+%table
+  %thead
+    %tr
+      %th
+        id
+      %th
+        data
+  - @rovers.each do |r|
+    %tr
+      %td
+        %a{:href => "/rovers/#{r.id}"}
+          = r.id
+      %td
+        = r.pos.join(" ")
+        
+        
+        
+

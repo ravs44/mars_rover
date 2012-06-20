@@ -1,0 +1,10 @@
+
+
+%h1
+  Rover id 
+  = @rover.id
+%h1
+  Rover Data
+  = @rover.pos.join(" ")
+
+%a{:href => "/rovers/#{@rover.id}/edit"}Edit This Rover

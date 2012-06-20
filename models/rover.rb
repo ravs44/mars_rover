@@ -1,9 +1,5 @@
 class Rover
 
-require 'data_mapper'
-DataMapper.setup(:default, 'postgres://uadmin:uadmin@localhost/marsrover')
-
-
   include DataMapper::Resource
 
 

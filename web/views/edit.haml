@@ -1,0 +1,18 @@
+%h1 Rover Edit
+- if @rover.errors
+  %ul
+    - @rover.errors.each do |e|
+      = e
+%form{:method => "Post", :action => "/rovers/#{@rover.id}"}
+  %input{:type => "hidden", :name => "_method", :value => "put"}
+  %label X
+  %input{:name => "rover[x]", :value => @rover.x }
+  %label Y
+  %input{:name => "rover[y]", :value => @rover.y }
+  %label Dir
+  %input{:name => "rover[dir]", :value => @rover.dir }
+  %input{:type => "submit", :name => "updaterover", :value => "Update"}  
+
+  
+
+
